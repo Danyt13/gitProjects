@@ -4,11 +4,15 @@ racine = tk.Tk()
 racine.title("Calculatrice")
 
 
-canvas = tk.Canvas(racine, width=250, height=90, bg="black", bd=10, relief="raised")
-canvas.grid(column=0, row=5, rowspan=4)
+
+def carre0():
+    x = 1
+    y = 0
+    print("0")
 
 
-bouton_carre0 = tk.Button(racine, text="0")
+#création de widgets
+bouton_carre0 = tk.Button(racine, text="0", command=carre0)
 bouton_carre1 = tk.Button(racine, text="1")
 bouton_carre2 = tk.Button(racine, text="2")
 bouton_carre3 = tk.Button(racine, text="3")
@@ -24,8 +28,11 @@ bouton_carre12 = tk.Button(racine, text="*")
 bouton_carre13 = tk.Button(racine, text="/")
 bouton_carre14 = tk.Button(racine, text="=")
 bouton_carre15 = tk.Button(racine, text=".")
+canvas = tk.Canvas(racine, width=250, height=90, bg="black", bd=10, relief="raised")
+canvas.grid(column=0, row=5, rowspan=4)
 
 
+#placement des widgets
 bouton_carre0.grid(column=1, row=8)
 bouton_carre1.grid(column=1, row=7)
 bouton_carre2.grid(column=2, row=7)
